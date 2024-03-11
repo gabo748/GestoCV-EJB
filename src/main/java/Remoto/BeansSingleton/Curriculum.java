@@ -1,6 +1,6 @@
-package BeansSingleton;
+package Remoto.BeansSingleton;
 
-import BeansStateFul.Local.IAplicante;
+import Local.Util.IAplicante;
 import Models.CV;
 import Models.UsuarioModel;
 

@@ -1,6 +1,6 @@
-package BeansStateless;
+package Remoto.BeansStateless;
 
-import BeansStateFul.Local.IAplicante;
+import Local.Util.IAplicante;
 import Models.UsuarioModel;
 
 import javax.ejb.EJB;

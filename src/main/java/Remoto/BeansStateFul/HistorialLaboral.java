@@ -1,6 +1,7 @@
-package BeansStateFul.Remoto;
+package Remoto.BeansStateFul;
 
-import BeansStateFul.Local.IAplicante;
+
+import Local.Util.IAplicante;
 import Models.CV;
 import Models.UsuarioModel;
 

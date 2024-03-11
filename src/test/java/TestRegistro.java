@@ -1,4 +1,4 @@
-import BeansStateless.IRegistro;
+import Remoto.BeansStateless.IRegistro;
 import Models.UsuarioModel;
 
 import javax.naming.Context;
@@ -13,7 +13,7 @@ public class TestRegistro {
     public static void testRegistro() {
         try {
             Context jndi = new InitialContext();
-            IRegistro registro = (IRegistro) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/Registro!BeansStateless.IRegistro");
+            IRegistro registro = (IRegistro) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/Registro!Remoto.BeansStateless.IRegistro");
 
             System.out.println("LlAMANDO EJB REMOTO");
 
@@ -22,7 +22,7 @@ public class TestRegistro {
             nuevoUsuario.setApellidos("Choto");
             nuevoUsuario.setEdad(90);
 
-            System.out.println("EL NUEVO USUARIO ES: /n" + registro.actualizarUsuario(nuevoUsuario));
+            System.out.println("EL NUEVO USUARIO ES: \n" + registro.actualizarUsuario(nuevoUsuario));
 
             System.out.println("LlAMANDO EJB LOCAL");
             System.out.println(registro.crearUsuario());

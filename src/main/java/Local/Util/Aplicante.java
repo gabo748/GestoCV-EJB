@@ -1,26 +1,22 @@
-package BeansStateFul.Local;
+package Local.Util;
 
+import Local.Lib.IAplicanteLib;
 import Models.CV;
 import Models.UsuarioModel;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateful;
 
 @Stateful
 
 public class Aplicante implements IAplicante {
 
+    @EJB
+    private IAplicanteLib aplicanteUtil;
+
     @Override
     public CV actualizarDatosAplicante(CV curriculumAplicante) {
-        UsuarioModel usuario = new UsuarioModel();
-        usuario.setNombre("Tony");
-        usuario.setApellidos("Hernandez");
-        usuario.setEdad(22);
-
-        curriculumAplicante.setUsuario(usuario);
-        curriculumAplicante.setAniosDeTrabajo(10);
-        curriculumAplicante.setExperienciaLaboral("Programador web");
-
-        return curriculumAplicante;
+        return aplicanteUtil.actualizarDatosAplicante(curriculumAplicante);
     }
 
     @Override

@@ -1,5 +1,4 @@
-package BeansStateFul.Remoto;
-
+package Remoto.BeansStateFul;
 
 import javax.ejb.Remote;
 

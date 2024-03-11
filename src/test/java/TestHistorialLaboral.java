@@ -1,5 +1,5 @@
-import BeansSingleton.ICurriculum;
-import BeansStateFul.Remoto.IHistorialLaboral;
+
+import Remoto.BeansStateFul.IHistorialLaboral;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -13,7 +13,7 @@ public class TestHistorialLaboral {
     public static void testHistorialLaboral() {
         try {
             Context jndi = new InitialContext();
-            IHistorialLaboral historialLaboral = (IHistorialLaboral) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/HistorialLaboral!BeansStateFul.Remoto.IHistorialLaboral");
+            IHistorialLaboral historialLaboral = (IHistorialLaboral) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/HistorialLaboral!Remoto.BeansStateFul.IHistorialLaboral");
 
             System.out.println("LlAMANDO EJB REMOTO");
             System.out.println("SU ULTIMO TRABAJO FUE: " + historialLaboral.ultimoTrabajo());

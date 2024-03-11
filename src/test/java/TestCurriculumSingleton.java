@@ -1,5 +1,4 @@
-import BeansSingleton.ICurriculum;
-import Models.CV;
+import Remoto.BeansSingleton.ICurriculum;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -13,7 +12,7 @@ public class TestCurriculumSingleton {
     public static void testCurriculum() {
         try {
             Context jndi = new InitialContext();
-            ICurriculum curriculum = (ICurriculum) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/Curriculum!BeansSingleton.ICurriculum");
+            ICurriculum curriculum = (ICurriculum) jndi.lookup("java:global/GestorCV-1.0-SNAPSHOT/Curriculum!Remoto.BeansSingleton.ICurriculum");
 
             System.out.println("LlAMANDO EJB REMOTO");
             System.out.println(curriculum.agregarCV());

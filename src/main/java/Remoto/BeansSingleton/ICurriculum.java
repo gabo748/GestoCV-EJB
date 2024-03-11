@@ -1,4 +1,4 @@
-package BeansSingleton;
+package Remoto.BeansSingleton;
 
 import Models.CV;
 
